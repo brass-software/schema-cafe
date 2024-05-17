@@ -40,11 +40,11 @@ func main() {
 			PhoneNumber: twilioPhoneNumber,
 		},
 		AuthFiles: &util.LocalFileSystem{
-			Root: "data/auth",
+			Root: authDir,
 		},
 		App: &util.SchemaCafe{
 			Data: &util.LocalFileSystem{
-				Root: "data/schema.cafe",
+				Root: dataDir,
 			},
 		},
 	}
