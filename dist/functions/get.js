@@ -1,0 +1,13 @@
+import API_ENDPOINT from "../constants/API_ENDPOINT";
+export default async function get(path) {
+    const endpoint = `${API_ENDPOINT}/schemas/${path}`;
+    const res = await fetch(endpoint, {
+        method: "GET",
+    });
+    if (!res.ok) {
+        const body = await res.text();
+        const err = `${res.status}: ${body}`;
+        throw new Error(err);
+    }
+    return res.json();
+}
