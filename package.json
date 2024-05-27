@@ -1,0 +1,23 @@
+{
+  "name": "@brass-software/schema-cafe",
+  "version": "0.0.1-beta1",
+  "description": "A node.js library for working with the Schema Cafe API.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brass-software/schema-cafe.git"
+  },
+  "author": "Mike Rybka",
+  "license": "GPL-3.0+",
+  "bugs": {
+    "url": "https://github.com/brass-software/schema-cafe/issues"
+  },
+  "homepage": "https://github.com/brass-software/schema-cafe#readme",
+  "dependencies": {
+    "typescript": "^5.4.5"
+  }
+}
