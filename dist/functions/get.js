@@ -3,6 +3,7 @@ export default async function get(path) {
     const endpoint = `${API_ENDPOINT}/schemas/${path}`;
     const res = await fetch(endpoint, {
         method: "GET",
+        headers: JSON.parse(localStorage.getItem('session')),
     });
     if (!res.ok) {
         const body = await res.text();

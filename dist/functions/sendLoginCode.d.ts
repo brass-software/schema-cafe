@@ -1,1 +1,1 @@
-export default function sendLoginCode(): void;
+export default function sendLoginCode(phone: string): Promise<any>;

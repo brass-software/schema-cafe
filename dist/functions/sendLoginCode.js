@@ -1,1 +1,16 @@
-export default function sendLoginCode() { }
+import API_ENDPOINT from "../constants/API_ENDPOINT";
+export default async function sendLoginCode(phone) {
+    const endpoint = `${API_ENDPOINT}/auth/login`;
+    const res = await fetch(endpoint, {
+        method: "POST",
+        body: JSON.stringify({
+            phone,
+        }),
+    });
+    if (!res.ok) {
+        const body = await res.text();
+        const err = `${res.status}: ${body}`;
+        throw new Error(err);
+    }
+    return res.json();
+}
