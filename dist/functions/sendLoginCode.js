@@ -1,6 +1,6 @@
 import API_ENDPOINT from "../constants/API_ENDPOINT";
 export default async function sendLoginCode(phone) {
-    const endpoint = `${API_ENDPOINT}/auth/login`;
+    const endpoint = `${API_ENDPOINT}/auth/send-login-code`;
     const res = await fetch(endpoint, {
         method: "POST",
         body: JSON.stringify({
