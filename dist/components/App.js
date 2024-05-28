@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import sendLoginCode from '../functions/sendLoginCode';
 import login from '../functions/login';
 export default function App(props) {
-    const authenticated = localStorage.getItem("session");
+    const authenticated = typeof localStorage !== "undefined" ? localStorage.getItem("session") : false;
     if (!authenticated) {
         return React.createElement(Login, null);
     }

@@ -3,7 +3,7 @@ import sendLoginCode from '../functions/sendLoginCode';
 import login from '../functions/login';
 
 export default function App(props: { path: string }) {
-    const authenticated = localStorage.getItem("session");
+    const authenticated = typeof localStorage !== "undefined" ? localStorage.getItem("session") : false;
     if (!authenticated) {
         return <Login />
     }
