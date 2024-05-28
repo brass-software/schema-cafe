@@ -1,11 +1,6 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const API_ENDPOINT_1 = __importDefault(require("../constants/API_ENDPOINT"));
-async function moveSchemaFieldPos(schemaID, fieldIndex, newFieldIndex) {
-    const endpoint = `${API_ENDPOINT_1.default}/schemas/${schemaID}/move_field_pos`;
+import API_ENDPOINT from "../constants/API_ENDPOINT";
+export default async function moveSchemaFieldPos(schemaID, fieldIndex, newFieldIndex) {
+    const endpoint = `${API_ENDPOINT}/schemas/${schemaID}/move_field_pos`;
     const res = await fetch(endpoint, {
         method: "POST",
         body: JSON.stringify({
@@ -20,4 +15,3 @@ async function moveSchemaFieldPos(schemaID, fieldIndex, newFieldIndex) {
     }
     return res.json();
 }
-exports.default = moveSchemaFieldPos;

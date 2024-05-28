@@ -1,10 +1,12 @@
 {
   "compilerOptions": {
-    "module": "NodeNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
     "target": "es2019",
     "declaration": true,
     "jsx": "react",
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "allowSyntheticDefaultImports": true,
   },
   "include": [
     "src/**/*"
