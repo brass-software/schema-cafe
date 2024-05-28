@@ -12,3 +12,4 @@ export {default as moveSchemaFieldPos} from './functions/moveSchemaFieldPos';
 export {default as setSchemaFieldType} from './functions/setSchemaFieldType';
 export {default as setSchemaFieldName} from './functions/setSchemaFieldName';
 export {default as Home} from './components/Home';
+export {default as RootLayout} from './components/RootLayout';
