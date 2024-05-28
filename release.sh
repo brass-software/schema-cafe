@@ -9,6 +9,7 @@ npm run build && \
 git add --all && \
 git commit -m $1 && \
 git push && \
+echo "here" && \
 npm version patch && \
 git push && \
 npm publish --access public
