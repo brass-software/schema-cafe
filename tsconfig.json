@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
-    "module": "esnext",
+    "module": "NodeNext",
     "target": "es2019",
     "declaration": true,
+    "jsx": "preserve",
     "outDir": "./dist"
   },
   "include": [

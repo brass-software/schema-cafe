@@ -1,6 +1,11 @@
-import API_ENDPOINT from "../constants/API_ENDPOINT";
-export default async function login(phone, code) {
-    const endpoint = `${API_ENDPOINT}/auth/login`;
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const API_ENDPOINT_1 = __importDefault(require("../constants/API_ENDPOINT"));
+async function login(phone, code) {
+    const endpoint = `${API_ENDPOINT_1.default}/auth/login`;
     const res = await fetch(endpoint, {
         method: "POST",
         body: JSON.stringify({
@@ -15,3 +20,4 @@ export default async function login(phone, code) {
     }
     return res.json();
 }
+exports.default = login;

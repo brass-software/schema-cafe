@@ -1,6 +1,11 @@
-import API_ENDPOINT from "../constants/API_ENDPOINT";
-export default async function setSchemaFieldName(schemaID, fieldID, newName) {
-    const endpoint = `${API_ENDPOINT}/schemas/${schemaID}/fields/${fieldID}/name`;
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const API_ENDPOINT_1 = __importDefault(require("../constants/API_ENDPOINT"));
+async function setSchemaFieldName(schemaID, fieldID, newName) {
+    const endpoint = `${API_ENDPOINT_1.default}/schemas/${schemaID}/fields/${fieldID}/name`;
     const res = await fetch(endpoint, {
         method: "PUT",
         body: JSON.stringify(newName),
@@ -12,3 +17,4 @@ export default async function setSchemaFieldName(schemaID, fieldID, newName) {
     }
     return res.json();
 }
+exports.default = setSchemaFieldName;
