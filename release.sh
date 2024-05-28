@@ -7,7 +7,7 @@ fi
 
 npm run build && \
 git add --all && \
-git commit -m $1 && \
+git commit -m wip && \
 git push && \
 echo "here" && \
 npm version patch && \

@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.setSchemaFieldName = exports.setSchemaFieldType = exports.moveSchemaFieldPos = exports.setSchemaDesc = exports.move = exports.removeFieldFromSchema = exports.addFieldToSchema = exports.createSchema = exports.createFolder = exports.get = exports.logout = exports.login = exports.sendLoginCode = void 0;
+exports.Home = exports.setSchemaFieldName = exports.setSchemaFieldType = exports.moveSchemaFieldPos = exports.setSchemaDesc = exports.move = exports.removeFieldFromSchema = exports.addFieldToSchema = exports.createSchema = exports.createFolder = exports.get = exports.logout = exports.login = exports.sendLoginCode = void 0;
 var sendLoginCode_1 = require("./functions/sendLoginCode");
 Object.defineProperty(exports, "sendLoginCode", { enumerable: true, get: function () { return __importDefault(sendLoginCode_1).default; } });
 var login_1 = require("./functions/login");
@@ -30,3 +30,5 @@ var setSchemaFieldType_1 = require("./functions/setSchemaFieldType");
 Object.defineProperty(exports, "setSchemaFieldType", { enumerable: true, get: function () { return __importDefault(setSchemaFieldType_1).default; } });
 var setSchemaFieldName_1 = require("./functions/setSchemaFieldName");
 Object.defineProperty(exports, "setSchemaFieldName", { enumerable: true, get: function () { return __importDefault(setSchemaFieldName_1).default; } });
+var Home_1 = require("./components/Home");
+Object.defineProperty(exports, "Home", { enumerable: true, get: function () { return __importDefault(Home_1).default; } });
