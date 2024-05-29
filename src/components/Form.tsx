@@ -16,7 +16,7 @@ export default function Form(props: {
     }
     return <div>
         {props.children}
-        {err && <p className='text-red'>{err}</p>}
+        {err && <p className="text-red">{err}</p>}
         <Button text="Submit" onClick={props.onSubmit} onSuccess={onSuccess} onError={onError} />
     </div>
 }
