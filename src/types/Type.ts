@@ -2,7 +2,7 @@ import Field from "./Field";
 
 export default interface Type {
     IsScalar?:  boolean;
-	Kind?:      string;
+	Kind?:      "string" | "bool" | "int";
 	IsPointer?: boolean;
 	IsArray?:   boolean;
 	IsMap?:     boolean;
